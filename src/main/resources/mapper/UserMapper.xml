@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 指向接口 -->
+<mapper namespace="com.service.cse.mapper.UserMapper">
+    <!-- 与方法名相同 -->
+    <!-- 返回值类型相同 -->
+    <!-- 入参类型相同 -->
+    <select id="selectUser" parameterType="Integer" resultType="com.service.cse.domain.User">
+        SELECT
+            *
+        FROM
+            `user`
+        WHERE
+            `id` = #{val}
+    </select>
+</mapper>
